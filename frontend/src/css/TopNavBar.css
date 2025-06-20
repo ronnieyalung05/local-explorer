@@ -1,0 +1,118 @@
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fefefe;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    padding: 0 2rem;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-brand-link {
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #2563eb;
+    letter-spacing: -0.02em;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navbar-brand-link:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.navbar-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: #374151;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.02em;
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.nav-link.active {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.nav-link.active:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* Add some padding to body to account for fixed navbar */
+body {
+    padding-top: 70px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .top-navbar {
+        padding: 0 1rem;
+        height: 60px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    .navbar-brand {
+        position: static;
+        transform: none;
+    }
+    
+    .navbar-brand-link {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-links {
+        margin-left: 0;
+        gap: 0.25rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    body {
+        padding-top: 100px;
+    }
+}
