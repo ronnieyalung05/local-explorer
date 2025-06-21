@@ -22,7 +22,7 @@
 | **React**        | Component-based frontend UI                           |
 | **React Router** | Client-side routing and navigation                    |
 | **CSS**          | Custom styling with modern layout principles          |
-| *(Optional)*     | May later integrate with Eventbrite or a location API |
+| *Public API Integration*     | Will later integrate with OpenWeb Ninja or a some other Event API |
 
 ---
 
